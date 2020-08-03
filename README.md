@@ -2,19 +2,16 @@
 # Automagica - Smart Robotic Process Automation [![Downloads](https://pepy.tech/badge/automagica/month)](https://pepy.tech/project/automagica/month)
 Automagica is a Smart Robotic Process Automation (SRPA) platform for fully automating tedious, manual tasks with software. 
 
-[![Github Signup Automagica](https://i.imgur.com/PKvMCSl.jpg)](https://portal.automagica.com/github/login)
+![Love Automagica Example](https://github.com/automagica/automagica/blob/master/images/automagica_drawing.gif)
 
 This repository is for the open source Python library, where all the Automagica building blocks are. With Automagica, automating cross-platform processes becomes a breeze. With this open source library we want to provide a comprehensive and consistent wrapper around known and lesser known automation libraries.
 
-![Love Automagica Example](https://github.com/OakwoodAI/automagica/blob/master/images/automagica_drawing.gif)
-
-Refer to the [Automagica official website](https://www.automagica.com) for more information. Registered users can access the [Automagica Portal](https://portal.automagica.com). For more info see the [documentation](https://automagica.readthedocs.io).
+Refer to the [Automagica official website](https://www.automagica.com) for more information. . For more info see the [documentation](https://automagica.readthedocs.io).
 
 ## Important information
-- We just launched the latest version of our [Automagica Portal](https://portal.automagica.com)
-- Follow our [blog](https://automagica.com/blog) to stay up to date
-- We opened a group on [Telegram](https://t.me/automagica) for the community
-- You can now also run automations developed with UiPath, Blue Prism, Automation Anywhere, AutoIt and Robot Framework with [Automagica Portal](https://portal.automagica.com)!
+- We are preparing the launch of Automagica 3.0 (introducing Automagica Flow and the new Automagica Portal). Contact us or join our __[Discord](https://discord.gg/PbY85WA)__ or __[Telegram](https://t.me/automagica)__ group to get beta access.
+- Check out our __[public roadmap](https://trello.com/b/qXHf5YqD/automagica-roadmap)__ and feel free to add suggestions to the Ideas column!
+- We're on __[Discord](https://discord.gg/PbY85WA)__ and __[Telegram](https://t.me/automagica)__
 
 
 ## Need expert support?
@@ -76,15 +73,25 @@ Try out the one-click examples:
 
 Browser working with Excel:
 
-![Excel Example Automagica](https://github.com/OakwoodAI/automagica/blob/master/images/browser_excel.gif)
+![Excel Example Automagica](https://github.com/automagica/automagica/blob/master/images/browser_excel.gif)
 
 SAP Automation (Production example, sensitive information is blurred):
 
-![Sap Example Automagica](https://github.com/OakwoodAI/automagica/blob/master/images/sap.gif)
+![Sap Example Automagica](https://github.com/automagica/automagica/blob/master/images/sap.gif)
 
 Folder and File manipulation
 
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/USPresidents.gif" width="800">
+<img src="https://github.com/automagica/automagica/blob/master/images/USPresidents.gif" width="800">
+
+## Docker Support (Experimental)
+This is still under heavy development, but we're exploring possibilities of running Automagica robots in a containerized desktop. You can try this with docker with the following commands:
+```
+git clone https://github.com/automagica/automagica
+cd automagica
+docker build . -t automagica
+docker run -it -p 8080:8080 automagica
+```
+Then browse to http://localhost:8080/vnc.html
 
 ## Activities
 
@@ -104,7 +111,8 @@ Process | Description
 **Random** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/dice-solid.svg" width="20"> [Random number](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_number) | Random numbers can be integers (not a fractional number) or a float (fractional number).
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/coins-solid.svg" width="20"> [Random boolean](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_boolean) | Generates a random boolean (True or False)
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/comment-solid.svg" width="20"> [Random name](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_name) | Generates a random name. Adding a locale adds a more common name in the specified locale. Provides first name and last name.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/user-tag-solid.svg" width="20"> [Random name](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_name) | Generates a random name. Adding a locale adds a more common name in the specified locale. Provides first name and last name.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/comment-solid.svg" width="20"> [Random sentence](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_sentence) | Generates a random sentence. Specifying locale changes language and content based on locale.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/map-solid.svg" width="20"> [Random address](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_address) | Generates a random address. Specifying locale changes random locations and streetnames based on locale.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/volume-up-solid.svg" width="20"> [Random beep](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_beep) | Generates a random beep, only works on Windows
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/calendar-solid.svg" width="20"> [Random date](https://automagica.readthedocs.io/activities.html#automagica.activities.generate_random_date) | Generates a random date.
@@ -119,12 +127,17 @@ Process | Description
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/chrome.svg" width="20"> [Open Chrome Browser](https://automagica.readthedocs.io/activities.html#automagica.activities.Chrome) | Open the Chrome Browser with the Selenium webdriver. Canb be used to automate manipulations in the browser.Different elements can be found as:
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/images-solid.svg" width="20"> [Save all images](https://automagica.readthedocs.io/activities.html#automagica.activities.save_all_images) | Save all images on current page in the Browser
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/align-center-solid.svg" width="20"> [Find elements by text](https://automagica.readthedocs.io/activities.html#automagica.activities.find_elements_by_text) | Find all elements by their text. Text does not need to match exactly, part of text is enough.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/align-center-solid.svg" width="20"> [Find element by text](https://automagica.readthedocs.io/activities.html#automagica.activities.find_element_by_text) | Find one element by text. Text does not need to match exactly, part of text is enough.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/align-center-solid.svg" width="20"> [Find element by text](https://automagica.readthedocs.io/activities.html#automagica.activities.by_text) | Find one element by text. Text does not need to match exactly, part of text is enough.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/window-restore-solid.svg" width="20"> [Find all links](https://automagica.readthedocs.io/activities.html#automagica.activities.find_all_links) | Find all links on a webpage in the browser
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/window-restore-solid.svg" width="20"> [Find first link on a webpage](https://automagica.readthedocs.io/activities.html#automagica.activities.find_first_link) | Find first link on a webpage
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/highlighter-solid.svg" width="20"> [Highlight element](https://automagica.readthedocs.io/activities.html#automagica.activities.highlight) | Highlight elements in yellow in the browser
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/window-close-solid.svg" width="20"> [Exit the browser](https://automagica.readthedocs.io/activities.html#automagica.activities.exit) | Quit the browser by exiting gracefully. One can also use the native 'quit' function, e.g. 'browser.quit()'
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find all XPaths](https://automagica.readthedocs.io/activities.html#automagica.activities.find_all_xpaths) | Find all elements with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath' function e.g. browser.find_elements_by_xpath()You can easily
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find XPath in browser](https://automagica.readthedocs.io/activities.html#automagica.activities.find_xpath) | Find all element with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath' function e.g. browser.find_element_by_xpath()
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/window-close-solid.svg" width="20"> [Exit the browser](https://automagica.readthedocs.io/activities.html#automagica.activities.exit) | Quit the browser by exiting gracefully. One can also use the native 'quit' function
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find all XPaths](https://automagica.readthedocs.io/activities.html#automagica.activities.by_xpaths) | Find all elements with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath'
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find XPath in browser](https://automagica.readthedocs.io/activities.html#automagica.activities.by_xpath) | Find all element with specified xpath on a webpage in the the browser. Can also use native 'find_elements_by_xpath'
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find class in browser](https://automagica.readthedocs.io/activities.html#automagica.activities.by_class) | Find element with specified class on a webpage in the the browser. Can also use native 'find_element_by_class_name'
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find class in browser](https://automagica.readthedocs.io/activities.html#automagica.activities.by_classes) | Find all elements with specified class on a webpage in the the browser. Can also use native 'find_elements_by_class_name' function
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find element in browser based on class and text](https://automagica.readthedocs.io/activities.html#automagica.activities.by_class_and_by_text) | Find all elements with specified class and text on a webpage in the the browser.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/times-solid.svg" width="20"> [Find id in browser](https://automagica.readthedocs.io/activities.html#automagica.activities.by_id) | Find element with specified id on a webpage in the the browser. Can also use native 'find_element_by_id' function
 **Credential Management** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/key-solid.svg" width="20"> [Set credential](https://automagica.readthedocs.io/activities.html#automagica.activities.set_credential) | Add a credential which stores credentials locally and securely. All parameters should be Unicode text.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/key-solid.svg" width="20"> [Delete credential](https://automagica.readthedocs.io/activities.html#automagica.activities.delete_credential) | Delete a locally stored credential. All parameters should be Unicode text.
@@ -139,16 +152,16 @@ Process | Description
 **Keyboard** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/keyboard-solid.svg" width="20"> [Press key](https://automagica.readthedocs.io/activities.html#automagica.activities.press_key) | Press and release an entered key. Make sure your keyboard is on US layout (standard QWERTY).If you are using this on Mac Os you might need to grant acces to your terminal application. (Security Preferences > Security & Privacy > Privacy > Accessibility)
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/keyboard-solid.svg" width="20"> [Press key combination](https://automagica.readthedocs.io/activities.html#automagica.activities.press_key_combination) | Press a combination of two or three keys simultaneously. Make sure your keyboard is on US layout (standard QWERTY).
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/keyboard-solid.svg" width="20"> [Type text](https://automagica.readthedocs.io/activities.html#automagica.activities.type_text) | Types text in the current active field by simulating keyboard typing.  Make sure your keyboard is on US layout (standard QWERTY).
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/keyboard-solid.svg" width="20"> [Type text and characters](https://automagica.readthedocs.io/activities.html#automagica.activities.typing) | Simulate keystrokes. If an element ID is specified, text will be typed in a specific field or element based on the element ID (vision) by the recorder.
 **Mouse** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-solid.svg" width="20"> [Get mouse coordinates](https://automagica.readthedocs.io/activities.html#automagica.activities.get_mouse_position) | Get the x and y pixel coordinates of current mouse position.These coordinates represent the absolute pixel position of the mouse on the computer screen. The x-coördinate starts on the left side and increases going right. The y-coördinate increases going down.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/search-location-solid.svg" width="20"> [Display mouse position](https://automagica.readthedocs.io/activities.html#automagica.activities.display_mouse_position) | Displays mouse position in an overlay. Refreshes every two seconds. Can be used to find mouse position of element on the screen.These coordinates represent the absolute pixel position of the mouse on the computer screen. The x-coördinate starts on the left side and increases going right. The y-coördinate increases going down.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-pointer-solid.svg" width="20"> [Mouse click](https://automagica.readthedocs.io/activities.html#automagica.activities.click) | Clicks on a pixel position on the visible screen determined by x and y coordinates.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-pointer-solid.svg" width="20"> [Double mouse click](https://automagica.readthedocs.io/activities.html#automagica.activities.double_click) | Double clicks on a pixel position on the visible screen determined by x and y coordinates.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-pointer-solid.svg" width="20"> [Right click](https://automagica.readthedocs.io/activities.html#automagica.activities.right_click) | Right clicks on a pixel position on the visible screen determined by x and y coordinates.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/arrows-alt-solid.svg" width="20"> [Move mouse](https://automagica.readthedocs.io/activities.html#automagica.activities.move_mouse_to) | Moves te pointer to a x-y position.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-pointer-solid.svg" width="20"> [Mouse click](https://automagica.readthedocs.io/activities.html#automagica.activities.click) | Clicks on an element based on the element ID (vision) or pixel position determined by x and y coordinates.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-pointer-solid.svg" width="20"> [Double mouse click](https://automagica.readthedocs.io/activities.html#automagica.activities.double_click) | Double clicks on an element based on the element ID (vision) or pixel position determined by x and y coordinates.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mouse-pointer-solid.svg" width="20"> [Right click](https://automagica.readthedocs.io/activities.html#automagica.activities.right_click) | Right clicks on an element based on the element ID (vision) or pixel position determined by x and y coordinates.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/arrows-alt-solid.svg" width="20"> [Move mouse](https://automagica.readthedocs.io/activities.html#automagica.activities.move_mouse_to) | Moves te pointer to an element based on the element ID (vision) or pixel position determined by x and y coordinates x-y position.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/arrows-alt-solid.svg" width="20"> [Move mouse relative](https://automagica.readthedocs.io/activities.html#automagica.activities.move_mouse_relative) | Moves the mouse an x- and y- distance relative to its current pixel position.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/arrows-alt-solid.svg" width="20"> [Drag mouse](https://automagica.readthedocs.io/activities.html#automagica.activities.drag_mouse_to) | Drag the mouse from its current position to a entered x-y position, while holding a specified button.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/arrows-alt-solid.svg" width="20"> [Drag mouse](https://automagica.readthedocs.io/activities.html#automagica.activities.drag_mouse_to) | Drags mouse to an element based on the element ID (vision) or pixel position determined by x and y coordinates x-y position.
 **Image** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/crop-alt-solid.svg" width="20"> [Random screen snippet](https://automagica.readthedocs.io/activities.html#automagica.activities.random_screen_snippet) | Take a random square snippet from the current screen. Mainly for testing and/or development purposes.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/expand-solid.svg" width="20"> [Screenshot](https://automagica.readthedocs.io/activities.html#automagica.activities.take_screenshot) | Take a screenshot of current screen.
@@ -168,6 +181,7 @@ Process | Description
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/folder-solid.svg" width="20"> [Copy a folder](https://automagica.readthedocs.io/activities.html#automagica.activities.copy_folder) | Copies a folder from one place to another.If the new location already contains a folder with the same name, a random 4 character id is added to the name.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/archive-solid.svg" width="20"> [Zip](https://automagica.readthedocs.io/activities.html#automagica.activities.zip_folder) | Zia folder and it's contents. Creates a .zip file.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/archive-solid.svg" width="20"> [Unzip](https://automagica.readthedocs.io/activities.html#automagica.activities.unzip) | Unzips a file or folder from a .zip file.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/clock-solid.svg" width="20"> [Return most recent file in directory](https://automagica.readthedocs.io/activities.html#automagica.activities.most_recent_file) | Return most recent file in directory
 **Delay** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/hourglass-solid.svg" width="20"> [Wait](https://automagica.readthedocs.io/activities.html#automagica.activities.wait) | Make the robot wait for a specified number of seconds. Note that this activity is blocking. This means that subsequent activities will not occur until the the specified waiting time has expired.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/hourglass-solid.svg" width="20"> [Wait for image](https://automagica.readthedocs.io/activities.html#automagica.activities.wait_for_image) | Waits for an image to appear on the screenNote that this activity waits for an exact match of the template image to appear on the screen.Small variations, such as color or resolution could result in a mismatch.
@@ -181,6 +195,7 @@ Process | Description
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/html5.svg" width="20"> [Export to HTML](https://automagica.readthedocs.io/activities.html#automagica.activities.export_to_html) | Export to HTML
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/heading-solid.svg" width="20"> [Set footers](https://automagica.readthedocs.io/activities.html#automagica.activities.set_footers) | Set the footers of the document
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/subscript-solid.svg" width="20"> [Set headers](https://automagica.readthedocs.io/activities.html#automagica.activities.set_headers) | Set the headers of the document
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-word-solid.svg" width="20"> [Quit Word](https://automagica.readthedocs.io/activities.html#automagica.activities.quit) | This closes Word, make sure to use 'save' or 'save_as' if you would like to save before quitting.
 **Word File** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-word-solid.svg" width="20"> [Read and Write Word files](https://automagica.readthedocs.io/activities.html#automagica.activities.WordFile) | These activities can read, write and edit Word (docx) files without the need of having Word installed.Note that, in contrary to working with the :func: 'Word' activities, a file get saved directly after manipulation.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-word-solid.svg" width="20"> [Read all text](https://automagica.readthedocs.io/activities.html#automagica.activities.read_all_text) | Read all the text from the document
@@ -227,7 +242,7 @@ Process | Description
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Export to PDF](https://automagica.readthedocs.io/activities.html#automagica.activities.export_to_pdf) | Export to PDF
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Insert data as table](https://automagica.readthedocs.io/activities.html#automagica.activities.insert_data_as_table) | Insert list of dictionaries as a table in Excel
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Read worksheet](https://automagica.readthedocs.io/activities.html#automagica.activities.read_worksheet) | Read data from a worksheet as a list of lists
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Quit Excel](https://automagica.readthedocs.io/activities.html#automagica.activities.quit) | This closes Excel, make sure to use :func: 'save' or 'save_as' if you would like to save before quitting.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Quit Excel](https://automagica.readthedocs.io/activities.html#automagica.activities.quit) | This closes Excel, make sure to use 'save' or 'save_as' if you would like to save before quitting.
 **Excel File** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Read and Write xlsx files.](https://automagica.readthedocs.io/activities.html#automagica.activities.ExcelFile) | This activity can read, write and edit Excel (xlsx) files without the need of having Excel installed.Note that, in contrary to working with the :func: 'Excel' activities, a file get saved directly after manipulation.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-excel-solid.svg" width="20"> [Export file to dataframe](https://automagica.readthedocs.io/activities.html#automagica.activities.to_dataframe) | Export to pandas dataframe
@@ -242,7 +257,7 @@ Process | Description
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Save PowerPoint](https://automagica.readthedocs.io/activities.html#automagica.activities.save_as) | Save PowerPoint Slidedeck
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Close PowerPoint Application](https://automagica.readthedocs.io/activities.html#automagica.activities.quit) | Close PowerPoint
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Add PowerPoint Slides](https://automagica.readthedocs.io/activities.html#automagica.activities.add_slide) | Adds slides to a presentation
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Slide count](https://automagica.readthedocs.io/activities.html#automagica.activities.number_of_slides) | :return: The number of slides
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Slide count](https://automagica.readthedocs.io/activities.html#automagica.activities.number_of_slides) | Returns the number of slides
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Text to slide](https://automagica.readthedocs.io/activities.html#automagica.activities.add_text) | Add text to a slide
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Delete slide](https://automagica.readthedocs.io/activities.html#automagica.activities.delete_slide) | Delete a slide
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-powerpoint-solid.svg" width="20"> [Replace all occurences of text in PowerPoint slides](https://automagica.readthedocs.io/activities.html#automagica.activities.replace_text) | Can be used for example to replace arbitrary placeholder value in a PowerPoint.For example when using a template slidedeck, using 'XXXX' as a placeholder.Take note that all strings are case sensitive.
@@ -254,7 +269,11 @@ Process | Description
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/salesforce.svg" width="20"> [Salesforce API](https://automagica.readthedocs.io/activities.html#automagica.activities.salesforce_api_call) | Activity to make calls to Salesforce REST API.
 **E-mail (SMTP)** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/mail-bulk-solid.svg" width="20"> [Mail with SMTP](https://automagica.readthedocs.io/activities.html#automagica.activities.send_mail_smtp) | This function lets you send emails with an e-mail address.
+ [Mail with attachment]() | This function lets you send emails with an e-mail address with files attached as attachments.
 **Windows OS** | ‌‌ 
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/readme.svg" width="20"> [Find window with specific title](https://automagica.readthedocs.io/activities.html#automagica.activities.find_window_title) | Find a specific window based on the name, either a perfect match or a partial match.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/passport-solid.svg" width="20"> [Login to Windows Remote Desktop](https://automagica.readthedocs.io/activities.html#automagica.activities.start_remote_desktop) | Create a RDP and login to Windows Remote Desktop
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/passport-solid.svg" width="20"> [Stop Windows Remote Desktop](https://automagica.readthedocs.io/activities.html#automagica.activities.close_remote_desktop) | Stop Windows Remote Desktop
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/passport-solid.svg" width="20"> [Set Windows password](https://automagica.readthedocs.io/activities.html#automagica.activities.set_user_password) | Sets the password for a Windows user.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/passport-solid.svg" width="20"> [Check Windows password](https://automagica.readthedocs.io/activities.html#automagica.activities.validate_user_password) | Validates a Windows user password if it is correct
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/user-lock-solid.svg" width="20"> [Lock Windows](https://automagica.readthedocs.io/activities.html#automagica.activities.lock_windows) | Locks Windows requiring login to continue.
@@ -293,6 +312,7 @@ Process | Description
 **Utilities** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/home-solid.svg" width="20"> [Get user home path](https://automagica.readthedocs.io/activities.html#automagica.activities.home_path) | Returns the current user's home path
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/desktop-solid.svg" width="20"> [Get desktop path](https://automagica.readthedocs.io/activities.html#automagica.activities.desktop_path) | Returns the current user's desktop path
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/download-solid.svg" width="20"> [Get downloads path](https://automagica.readthedocs.io/activities.html#automagica.activities.downloads_path) | Returns the current user's default download path
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/file-solid.svg" width="20"> [Open file](https://automagica.readthedocs.io/activities.html#automagica.activities.open_file) | Opens file with default programs
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/desktop-solid.svg" width="20"> [Set wallpaper](https://automagica.readthedocs.io/activities.html#automagica.activities.set_wallpaper) | Set Windows desktop wallpaper with the the specified image
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/cloud-download-alt-solid.svg" width="20"> [Download file from a URL](https://automagica.readthedocs.io/activities.html#automagica.activities.download_file_from_url) | Download file from a URL
@@ -361,12 +381,17 @@ Process | Description
 **SAP GUI** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Quit SAP GUI](https://automagica.readthedocs.io/activities.html#automagica.activities.quit) | Quits the SAP GUI completely and forcibly.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Log in to SAP GUI](https://automagica.readthedocs.io/activities.html#automagica.activities.login) | Logs in to an SAP system on SAP GUI.
-<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Click on a sAP GUI element](https://automagica.readthedocs.io/activities.html#automagica.activities.click) | Clicks on an identifier in the SAP GUI.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Click on a sAP GUI element](https://automagica.readthedocs.io/activities.html#automagica.activities.click_sap) | Clicks on an identifier in the SAP GUI.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Get text from a SAP GUI element](https://automagica.readthedocs.io/activities.html#automagica.activities.get_text) | Retrieves the text from a SAP GUI element.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Set text of a SAP GUI element](https://automagica.readthedocs.io/activities.html#automagica.activities.set_text) | Sets the text of a SAP GUI element.
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/briefcase-solid.svg" width="20"> [Highlights a SAP GUI element](https://automagica.readthedocs.io/activities.html#automagica.activities.highlight) | Temporarily highlights a SAP GUI element
 **Portal** | ‌‌ 
 <img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/robot-solid.svg" width="20"> [Create a new job in the Automagica Portal](https://automagica.readthedocs.io/activities.html#automagica.activities.create_new_job) | This activity creates a new job in the Automagica Portal for a given script. The bot performing this activity will need to be assigned to the script it creates a job for.
+**Vision** | ‌‌ 
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/eye-solid.svg" width="20"> [Check if element is visible on screen](https://automagica.readthedocs.io/activities.html#automagica.activities.is_visible) | This activity can be used to check if a certain element is visible on the screen.Note that this uses Automagica vision and uses some advanced an fuzzy matching algorithms for finding identical elements.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/eye-solid.svg" width="20"> [Wait for an element to appear](https://automagica.readthedocs.io/activities.html#automagica.activities.wait_appear) | Wait for an element that is defined the recorder
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/eye-solid.svg" width="20"> [Detect and click on an element with the Automagica Vision API](https://automagica.readthedocs.io/activities.html#automagica.activities.wait_vanish) | This activity allows the bot to detect and click on an element by using the Automagica Vision API with a provided sample ID.
+<img src="https://github.com/OakwoodAI/automagica/blob/master/images/icons/eye-solid.svg" width="20"> [Detect and click on an element with the Automagica Vision API](https://automagica.readthedocs.io/activities.html#automagica.activities.read_text) | This activity allows the bot to detect and click on an element by using the Automagica Vision API with a provided sample ID.
 |<img width=150/>|  ‌‌|
 
 ## Credits
@@ -394,11 +419,33 @@ Under the hood, Automagica is built on some of the greatest open source librarie
 - [pysnmp](https://github.com/etingof/pysnmp) and special thanks to [quicksnmp](https://github.com/alessandromaggio/quicksnmp)
 - [pandas](https://github.com/pandas-dev/pandas)
 
+## Contribute
+
+### Not a developer?
+No problem! You can contribute in the following ways:
+- Star our repository, the more people we can get involved the better! 😎
+- [Create an 'issue'](https://github.com/automagica/automagica/issues) on our GitHub with any features you feel are missing.
+- Notice something not working like expected? [Create an issue](https://github.com/automagica/automagica/issues), we won't bite!
+- Don't have a GitHub account? Feel free to send us an e-mail at [koen@automagica.com](mailto:koen@automagica.com) or [thomas@automagica.com](mailto:thomas@automagica.com).
+
+### Developers
+You can contribute in the following ways:
+- Pull requests with code and/or documentation
+- Feature requests, bug squatting, feel free to [create an issue](https://github.com/automagica/automagica/issues)!
+- If you're interested in joining our team, [send us an e-mail](mailto:koen@automagica.com).
+ 
+
 #### Special contributor mentions
 - [ygxiao](https://github.com/ygxiao)
 - [jjlehtinen](https://github.com/jjlehtinen)
+- [gopal-y](https://github.com/gopal-y)
+
 
 A special thanks goes out to all the above-mentioned libraries, repositories and contributers! :heart:
 
 
 <img src="https://i.imgur.com/eQYywRd.png" width="300">
+
+
+## Commercial license
+Need a commercial license for Automagica? Contact us at [sales@automagica.com](mailto:sales@automagica.com).

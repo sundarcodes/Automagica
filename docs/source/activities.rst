@@ -22,6 +22,7 @@ Random
 .. autofunction:: generate_random_number
 .. autofunction:: generate_random_boolean
 .. autofunction:: generate_random_name
+.. autofunction:: generate_random_sentence
 .. autofunction:: generate_random_address
 .. autofunction:: generate_random_beep
 .. autofunction:: generate_random_date
@@ -60,7 +61,7 @@ Keyboard
 --------
 .. autofunction:: press_key
 .. autofunction:: press_key_combination
-.. autofunction:: type_text
+.. autofunction:: typing
 
 
 Mouse
@@ -98,6 +99,7 @@ Folder Operations
 .. autofunction:: copy_folder
 .. autofunction:: zip_folder
 .. autofunction:: unzip
+.. autofunction:: most_recent_file
 
 
 Delay
@@ -156,10 +158,14 @@ Salesforce
 E-mail (SMTP)
 -------------
 .. autofunction:: send_mail_smtp
+.. autofunction:: send_mail_attachment
 
 
 Windows OS
 ----------
+.. autofunction:: find_window_title
+.. autofunction:: start_remote_desktop
+.. autofunction:: close_remote_desktop
 .. autofunction:: set_user_password
 .. autofunction:: validate_user_password
 .. autofunction:: lock_windows
@@ -210,6 +216,7 @@ Utilities
 ---------
 .. autofunction:: home_path
 .. autofunction:: desktop_path
+.. autofunction:: downloads_path
 .. autofunction:: open_file
 .. autofunction:: set_wallpaper
 .. autofunction:: download_file_from_url
@@ -317,7 +324,7 @@ SAP GUI
 -------
 .. autofunction:: quit
 .. autofunction:: login
-.. autofunction:: click
+.. autofunction:: click_sap
 .. autofunction:: get_text
 .. autofunction:: set_text
 .. autofunction:: highlight
@@ -326,3 +333,11 @@ SAP GUI
 Portal
 ------
 .. autofunction:: create_new_job
+
+
+Vision
+------
+.. autofunction:: is_visible
+.. autofunction:: wait_appear
+.. autofunction:: wait_vanish
+.. autofunction:: read_text
